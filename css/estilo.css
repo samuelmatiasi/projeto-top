@@ -20,6 +20,8 @@
     transform: translate(-50%, -50%);
     z-index: -1; /* Colocar o vídeo atrás do conteúdo */
   }
+  
+  
 
 
   * {
@@ -34,8 +36,6 @@
    width: 100%;
    background: var(--bg-color4);
   }
-
-
 
   header {
     position: fixed;
@@ -67,6 +67,14 @@
   nav ul li a:hover {
     border-bottom: 3px solid var(--text-color4);
   }
+
+  main {
+    width: 100%;
+    overflow: hidden;
+   
+  }
+
+
   section {
     width: 100%;
     height: 100vh;
@@ -85,7 +93,13 @@
 }
 
 
-.left {
+.produtos{
+  padding-top: 100px;
+}
+
+
+
+  .left {
     display: flex;
     flex-direction: column;
     align-items: flex-start;/*Os elementos ficam grudados um do lado do outro à esquerda do flex container.*/ 
@@ -113,7 +127,6 @@
     box-shadow: 0 9px 6px var(--second-color);
   }
 
-  
   .right img {
     height: 300px;
     width: 500px;
@@ -121,15 +134,6 @@
     margin-bottom: 1rem;
     animation: efeito1 1.8s infinite alternate;
   }
-  
-  .right img {
-    height: 300px;
-    width: 500px;
-    border-radius: 50%;
-    margin-bottom: 1rem;
-    animation: efeito1 1.8s infinite alternate;
-  }
-  
   .shadow {
     width: 450px;
     height: 45px;
@@ -139,6 +143,7 @@
     filter: blur(10px);
     animation: efeito2 1.8s infinite alternate;
   }
+
   @keyframes efeito1 {
     0% {
       transform: translateY(0);
@@ -155,3 +160,42 @@
       transform: scale(0.85, 0.85);
     }
   }
+
+
+
+
+
+
+
+/*resoonsividade mobile*/
+@media (width <= 500px){
+
+  body{
+    width: 100%;
+
+  }
+
+
+  header nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  header nav ul{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .right img{
+    width: 100%
+  }
+
+}
